@@ -58,6 +58,7 @@ input {
     outline: none;
     border: 1px solid #fefffa;
     border-radius: 10px;
+    color: #fefffa;
 }
 
 .form button {
@@ -78,4 +79,67 @@ input {
     width: max-content;
     height: 500px;
     object-fit: contain;
+}
+
+.carrusel {
+    margin: 20px auto;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.descuento {
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    border: 2px solid #2AEA49;
+    background-color: #212321;
+    color: #fefffa;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.img-circular {
+    margin: 10px auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fefffa;
+}
+
+.descuento button {
+    width: 80%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #B129FF;
+}
+
+
+/* FOOTER */
+
+#footer {
+    background-color: #343734;
+
+}
+
+.footer-img {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.footer-img img {
+    width: max-content;
+    height: 400px;
+    object-fit: contain;
+}
+
+footer .form {
+    background-color: #010203;
+    padding: 0;
+}
+
+footer h5 {
+    font-weight: 200;
 }
