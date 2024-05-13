@@ -8,50 +8,80 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+    <nav id="nav" class="navbar navbar-expand-lg  p-3 fs-4">
+        <div class="container-fluid nav">
             <a class="navbar-brand" href="#">
-                <img src="" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                <img src="data/logo_gelatina.png" alt="Logo Gelatina" width="50" height="50">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="data/boton-menu(2).svg" alt="Boton menu" class="burger">
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Recompensa</a>
-                    <a class="nav-link" href="#">Descuuentos</a>
-                    <a class="nav-link" href="#">Programacion</a>
-                    <a class="nav-link" href="#">Redes Sociales</a>
-                </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Recompensa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Descuentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Programacion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Redes Sociales</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
-    <main class="container">
+    <main class="container-fluid">
         <div class="row">
-            <div class="form col-12 col-lg-6">
-                <h1>¡Regalo Gelatinoso!</h1>
-                <h3>Obtené un codigo de descuento de regalo en alguna de las marcas adheridas a Gelatina. <br> Además, ¡Recibí novedades personalizadas de tu programa favorito!</h3>
+            <div class="form col-12 col-lg-6 p-5">
+                <h1 class="fs-1">¡Regalo Gelatinoso!</h1>
+                <h3 class="fs-4">Obtené un codigo de descuento de regalo en alguna de las marcas adheridas a Gelatina. <br> Además, ¡Recibí novedades personalizadas de tu programa favorito!</h3>
                 <input type="text" name="" placeholder="Correo electronico" id="correo">
-                <input type="button" value="OBTENER">
+                <button type="submit"> OBTENER </button>
+                <!-- Button trigger modal -->
+                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    OBTENER
+                </button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        ...
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                    </div>
+                </div> -->
             </div>
             <div class="ilustracion col-12 col-lg-6">
+                <img src="data/Cabecera_desktop.png" alt="">
             </div>
         </div>
     </main>
-    <section class="container">
+    <section class="container my-5">
         <div class="row">
             <div class="texto-1 col-12 col-lg-6">
-                <h2>Descuento de regalo</h2>
+                <h2 class="mb-2">Descuento de regalo</h2>
                 <p>Completá el formulario y ganá un codigo de descuento exclusivo en una de las marcas adheridas a Gelatina. <br>¡Si, completamente gratis!</p>
             </div>
             <div class="texto-2 col-12 col-lg-6 ">
-                <h2>Tu programa favorito</h2>
-                <p>Dejanos tu correo para recibir toda la informacion del programa que mas te guste y no perderte ninguno de sus contenidos. <br> Entrevistas, noticias y eventos semanales, todo en tu bandeja de entrada.</p>
+                <h2 class="mb-2 fs-2">Tu programa favorito</h2>
+                <p class="fs-5">Dejanos tu correo para recibir toda la informacion del programa que mas te guste y no perderte ninguno de sus contenidos. <br> Entrevistas, noticias y eventos semanales, todo en tu bandeja de entrada.</p>
             </div>
         </div>
     </section>
-    <section id="descuentos">
-        <h2>MARCAS ADHERIDAS</h2>
+    <section id="descuentos my-5">
+        <h2 class="text-center">MARCAS ADHERIDAS</h2>
         <div class="carrusel"></div>
     </section>
     <section id="programacion">
