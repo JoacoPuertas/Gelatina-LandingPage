@@ -10,6 +10,14 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,-25"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,-25"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -35,15 +43,15 @@
           <img src="data/boton-menu(2).svg" alt="Boton menu" class="burger" />
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold">
             <li class="nav-item px-2">
-              <a class="nav-link" href="#">Recompensa</a>
+              <a class="nav-link" href="#recompensa">Recompensa</a>
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link" href="#">Descuentos</a>
+              <a class="nav-link" href="#descuentos">Descuentos</a>
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link" href="#">Programacion</a>
+              <a class="nav-link" href="#programacion">Programación</a>
             </li>
             <li class="nav-item px-2">
               <a class="nav-link" href="#">Redes Sociales</a>
@@ -52,6 +60,7 @@
         </div>
       </div>
     </nav>
+    <!-- header-->
     <main class="container-fluid">
       <div class="row ps-xl-5">
         <!--este primer div es la ilustracion para mobile-->
@@ -161,19 +170,22 @@
         </div>
       </div>
     </main>
-    <section class="container my-5">
-      <div class="row">
+    <!--bullets-->
+    <section class="container my-5 my-lg-0 pb-5" id="recompensa">
+      <div class="row text-center">
         <div class="texto-1 col-12 col-lg-6">
+          <span class="material-symbols-outlined fs-1 p-3"> shopping_bag </span>
           <h2 class="mb-2">Descuento de regalo</h2>
-          <p>
+          <p class="px-5 mx-xxl-5 pt-2 fw-light">
             Completá el formulario y ganá un codigo de descuento exclusivo en
             una de las marcas adheridas a Gelatina. <br />¡Si, completamente
             gratis!
           </p>
         </div>
-        <div class="texto-2 col-12 col-lg-6">
-          <h2 class="mb-2 fs-2">Tu programa favorito</h2>
-          <p class="fs-5">
+        <div class="texto-1 col-12 col-lg-6 pt-5 pt-lg-0">
+          <span class="material-symbols-outlined fs-1 p-3"> star </span>
+          <h2 class="mb-2">Tu programa favorito</h2>
+          <p class="px-5 mx-xxl-5 pt-2 fw-light">
             Dejanos tu correo para recibir toda la informacion del programa que
             mas te guste y no perderte ninguno de sus contenidos. <br />
             Entrevistas, noticias y eventos semanales, todo en tu bandeja de
@@ -182,7 +194,8 @@
         </div>
       </div>
     </section>
-    <section id="descuentos my-5">
+    <!--descuentos-->
+    <section class="my-5 pt-5" id="descuentos">
       <h2 class="text-center">MARCAS ADHERIDAS</h2>
       <div class="carrusel text-center">
         <div class="descuento">
@@ -219,11 +232,87 @@
         </div>
       </div>
     </section>
-    <section id="programacion">
-      <div class="programa-1"></div>
-      <div class="programa-2"></div>
+    <!--programacion-->
+    <section class="row p-5 mx-5" id="programacion">
+      <!--programa 1-->
+      <div class="col-12 col-lg-6 px-5">
+        <div class="programa-1 d-flex justify-content-center py-5 mx-2">
+          <div class="p-0 m-0">
+            <img
+              src="data/industrianacional.png"
+              class="img-fluid w-100"
+              alt=""
+            />
+          </div>
+          <div class="container">
+            <h2 class="">Industria Nacional</h2>
+            <p class="mt-3">LUNES A JUEVES 13:00 a 16:00</p>
+            <p class="">
+              Pedro Rosemblat + Marcos Aramburu + Lía Copello + Matías Mowszet
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--programa 2-->
+      <div class="col-12 col-lg-6 px-5">
+        <div class="programa-2 d-flex justify-content-center py-5 mx-2">
+          <div class="p-0 m-0">
+            <img
+              src="data/industrianacional.png"
+              class="img-fluid w-100"
+              alt=""
+            />
+          </div>
+          <div class="container">
+            <h2 class="">Industria Nacional</h2>
+            <p class="mt-3">LUNES A JUEVES 13:00 a 16:00</p>
+            <p class="">
+              Pedro Rosemblat + Marcos Aramburu + Lía Copello + Matías Mowszet
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--programa 3-->
+      <div class="col-12 col-lg-6 px-5">
+        <div class="programa-3 d-flex justify-content-center py-5 mx-2">
+          <div class="p-0 m-0">
+            <img
+              src="data/industrianacional.png"
+              class="img-fluid w-100"
+              alt=""
+            />
+          </div>
+          <div class="container">
+            <h2 class="">Industria Nacional</h2>
+            <p class="mt-3">LUNES A JUEVES 13:00 a 16:00</p>
+            <p class="">
+              Pedro Rosemblat + Marcos Aramburu + Lía Copello + Matías Mowszet
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--programa 4-->
+      <div class="col-12 col-lg-6 px-5">
+        <div class="programa-4 d-flex justify-content-center py-5 mx-2">
+          <div class="p-0 m-0">
+            <img
+              src="data/industrianacional.png"
+              class="img-fluid w-100"
+              alt=""
+            />
+          </div>
+          <div class="container">
+            <h2 class="">Industria Nacional</h2>
+            <p class="mt-3">LUNES A JUEVES 13:00 a 16:00</p>
+            <p class="">
+              Pedro Rosemblat + Marcos Aramburu + Lía Copello + Matías Mowszet
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="programa-2"></div>
       <div class="programa-3"></div>
-      <div class="programa-4"></div>
+      <div class="programa-4"></div> -->
     </section>
     <footer id="footer" class="p-4 container-fluid">
       <div class="form row">
