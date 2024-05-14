@@ -1,48 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gelatina</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <nav id="nav" class="navbar navbar-expand-lg  p-3 fs-4">
-        <div class="container-fluid nav">
-            <a class="navbar-brand" href="#">
-                <img src="data/logo_gelatina.png" alt="Logo Gelatina" width="50" height="50">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="data/boton-menu(2).svg" alt="Boton menu" class="burger">
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link " href="#">Recompensa</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="#">Descuentos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="#">Programacion</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="#">Redes Sociales</a>
-                    </li>
-                </ul>
-            </div>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="nav" class="navbar navbar-expand-lg p-3 fs-5">
+      <div class="container-fluid nav">
+        <a class="navbar-brand ms-4" href="#">
+          <img
+            src="data/logo_gelatina.png"
+            alt="Logo Gelatina"
+            width="50"
+            height="50"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <img src="data/boton-menu(2).svg" alt="Boton menu" class="burger" />
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#">Recompensa</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#">Descuentos</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#">Programacion</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#">Redes Sociales</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
     <main class="container-fluid">
-        <div class="row">
-            <div class="form col-12 col-lg-6 p-5">
-                <h1 class="fs-1">¡Regalo Gelatinoso!</h1>
-                <h3 class="fs-4">Obtené un codigo de descuento de regalo en alguna de las marcas adheridas a Gelatina. <br> Además, ¡Recibí novedades personalizadas de tu programa favorito!</h3>
-                <input type="text" placeholder="Correo electronico" id="correo" autocomplete="off">
-                <button type="submit"> OBTENER </button>
-                <!-- Button trigger modal -->
-                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <div class="row ps-xl-5">
+        <!--este primer div es la ilustracion para mobile-->
+        <div class="col-12 d-md-none p-0 d-flex justify-content-end">
+          <img
+            class="img-fluid d-sm-none w-100"
+            src="data/Cabecera_ mobile.png"
+            alt="Ilustración"
+          />
+          <img
+            class="img-fluid d-none d-sm-block w-75"
+            src="data/Cabecera_desktop.png"
+            alt="Ilustración"
+          />
+        </div>
+        <!--texto y formulario-->
+        <div
+          class="form col-12 col-md-7 col-lg-6 py-0 px-sm-0 ps-md-2 pt-md-4 p-lg-5 pt-xxl-5"
+        >
+          <!--contenedor dentro de contenedor,
+            usado (mas que nada) para aumentar todavia mas el padding en resolucion xxl-->
+          <div class="container pe-md-0 p-lg-3 pt-xl-4 ps-xl-2 pt-xxl-5">
+            <h1 class="fs-1 fw-bold">¡Regalo Gelatinoso!</h1>
+            <h3 class="fs-6 fw-light pt-2">
+              Obtené un codigo de descuento de regalo en alguna de las marcas
+              adheridas a Gelatina.
+            </h3>
+            <h3 class="fs-6 fw-light">
+              Además, ¡Recibí novedades personalizadas de tu programa favorito!
+            </h3>
+            <!--formulario para desktop-->
+            <section class="d-none d-md-block">
+              <input
+                type="text"
+                placeholder="Correo electronico"
+                id="correo"
+                autocomplete="off"
+              />
+              <button type="submit" class="my-2 ms-lg-1">OBTENER</button>
+            </section>
+            <!-- formulario para mobile
+                (no se cómo concha me salió pero prefiero
+                no tocarlo mas xd)-->
+            <section class="row pt-4 d-md-none">
+              <div class="col-12 col-md-6">
+                <section class="row px-2">
+                  <input
+                    type="text"
+                    placeholder="Correo electronico"
+                    id="correo"
+                    autocomplete="off"
+                  />
+                </section>
+              </div>
+              <div class="col-12 col-md-6 pt-2">
+                <section class="row px-2">
+                  <button type="submit" class="my-2 ms-lg-1">OBTENER</button>
+                </section>
+              </div>
+            </section>
+            <!-- Button trigger modal -->
+            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     OBTENER
                 </button>
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -62,91 +133,140 @@
                     </div>
                     </div>
                 </div> -->
-            </div>
-            <div class="ilustracion col-12 col-lg-6">
-                <img src="data/Cabecera_desktop.png" alt="">
-            </div>
+          </div>
         </div>
+        <!--ilustracion desktop-->
+        <div
+          class="ilustracion col-12 col-md-5 col-lg-6 d-flex justify-content-end p-0"
+        >
+          <!-- aca abajo hay 2 imagenes, cuando la mediaquery llega a xl, se oculta la 
+        imag q ocupa el 100% y se muestra la que ocupa el 75%, porque la otra
+    queda enorme. Se deja de usar la clase css de ilustracion (fijate que opinas, es para
+    que la imagen vaya cambiando de tamaño segun resolucion)-->
+          <img
+            class="img-fluid w-100 d-none d-xl-block"
+            src="data/Cabecera_desktop.png"
+            alt="Ilustración"
+          />
+          <img
+            class="img-fluid w-100 d-none d-lg-block d-xl-none"
+            src="data/Cabecera_desktop.png"
+            alt="Ilustración"
+          />
+          <img
+            class="img-fluid w-100 d-none d-md-block d-lg-none"
+            src="data/Cabecera_desktop.png"
+            alt="Ilustración"
+          />
+        </div>
+      </div>
     </main>
     <section class="container my-5">
-        <div class="row">
-            <div class="texto-1 col-12 col-lg-6">
-                <h2 class="mb-2">Descuento de regalo</h2>
-                <p>Completá el formulario y ganá un codigo de descuento exclusivo en una de las marcas adheridas a Gelatina. <br>¡Si, completamente gratis!</p>
-            </div>
-            <div class="texto-2 col-12 col-lg-6 ">
-                <h2 class="mb-2 fs-2">Tu programa favorito</h2>
-                <p class="fs-5">Dejanos tu correo para recibir toda la informacion del programa que mas te guste y no perderte ninguno de sus contenidos. <br> Entrevistas, noticias y eventos semanales, todo en tu bandeja de entrada.</p>
-            </div>
+      <div class="row">
+        <div class="texto-1 col-12 col-lg-6">
+          <h2 class="mb-2">Descuento de regalo</h2>
+          <p>
+            Completá el formulario y ganá un codigo de descuento exclusivo en
+            una de las marcas adheridas a Gelatina. <br />¡Si, completamente
+            gratis!
+          </p>
         </div>
+        <div class="texto-2 col-12 col-lg-6">
+          <h2 class="mb-2 fs-2">Tu programa favorito</h2>
+          <p class="fs-5">
+            Dejanos tu correo para recibir toda la informacion del programa que
+            mas te guste y no perderte ninguno de sus contenidos. <br />
+            Entrevistas, noticias y eventos semanales, todo en tu bandeja de
+            entrada.
+          </p>
+        </div>
+      </div>
     </section>
     <section id="descuentos my-5">
-        <h2 class="text-center">MARCAS ADHERIDAS</h2>
-        <div class="carrusel text-center">
-            <div class="descuento">
-                <div class="img-circular"></div>
-                <h2 class="my-3 fs-1">15%</h2>
-                <div class="texto-boton">
-                    <h5 class="fs-5" >En todos los productos</h5>
-                    <button>Ir al sitio</button>
-                </div>
-            </div>
-            <div class="descuento">
-                <div class="img-circular"></div>
-                <h2 class="my-3 fs-1">10%</h2>
-                <div class="texto-boton">
-                    <h5 class="fs-5" >En todos los productos</h5>
-                    <button>Ir al sitio</button>
-                </div>
-            </div>
-            <div class="descuento">
-                <div class="img-circular"></div>
-                <h2 class="my-3 fs-1">15%</h2>
-                <div class="texto-boton">
-                    <h5 class="fs-5" >En todos los productos</h5>
-                    <button>Ir al sitio</button>
-                </div>
-            </div>
-            <div class="descuento">
-                <div class="img-circular"></div>
-                <h2 class="my-3 fs-1">20%</h2>
-                <div class="texto-boton">
-                    <h5 class="fs-5" >En todos los productos</h5>
-                    <button>Ir al sitio</button>
-                </div>
-            </div>
+      <h2 class="text-center">MARCAS ADHERIDAS</h2>
+      <div class="carrusel text-center">
+        <div class="descuento">
+          <div class="img-circular"></div>
+          <h2 class="my-3 fs-1">15%</h2>
+          <div class="texto-boton">
+            <h5 class="fs-5">En todos los productos</h5>
+            <button>Ir al sitio</button>
+          </div>
         </div>
+        <div class="descuento">
+          <div class="img-circular"></div>
+          <h2 class="my-3 fs-1">10%</h2>
+          <div class="texto-boton">
+            <h5 class="fs-5">En todos los productos</h5>
+            <button>Ir al sitio</button>
+          </div>
+        </div>
+        <div class="descuento">
+          <div class="img-circular"></div>
+          <h2 class="my-3 fs-1">15%</h2>
+          <div class="texto-boton">
+            <h5 class="fs-5">En todos los productos</h5>
+            <button>Ir al sitio</button>
+          </div>
+        </div>
+        <div class="descuento">
+          <div class="img-circular"></div>
+          <h2 class="my-3 fs-1">20%</h2>
+          <div class="texto-boton">
+            <h5 class="fs-5">En todos los productos</h5>
+            <button>Ir al sitio</button>
+          </div>
+        </div>
+      </div>
     </section>
     <section id="programacion">
-        <div class="programa-1"></div>
-        <div class="programa-2"></div>
-        <div class="programa-3"></div>
-        <div class="programa-4"></div>
+      <div class="programa-1"></div>
+      <div class="programa-2"></div>
+      <div class="programa-3"></div>
+      <div class="programa-4"></div>
     </section>
     <footer id="footer" class="p-4 container-fluid">
-        <div class="form row">
-            <div class="footer-img col-12 col-lg-6">
-                <img src="data/Footer_desktop.png" alt="">
-            </div>
-            <div class="col-12 col-lg-6 p-4">
-                <h2>¡Regalo Gelatinoso!</h2>
-                <p>Obtené un código de descuento de regalo en alguna de las marcas adheridas a Gelatina.<br> Además, ¡recibí novedades personalizadas de tu programa favorito!</p>
-                <input type="text" name="" placeholder="Correo electronico" id="correo">
-                <button type="submit">OBTENER</button>
-            </div>
+      <div class="form row">
+        <div class="footer-img col-12 col-lg-6">
+          <img src="data/Footer_desktop.png" alt="" />
         </div>
-        <div class="redes">
-            <ul>
-                <img src="" alt="">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+        <div class="col-12 col-lg-6 p-4">
+          <h2>¡Regalo Gelatinoso!</h2>
+          <p>
+            Obtené un código de descuento de regalo en alguna de las marcas
+            adheridas a Gelatina.<br />
+            Además, ¡recibí novedades personalizadas de tu programa favorito!
+          </p>
+          <input
+            type="text"
+            name=""
+            placeholder="Correo electronico"
+            id="correo"
+          />
+          <button type="submit">OBTENER</button>
         </div>
-        <h5 class="text-center"> <i>Gelatina 2024. &copy; Todos los derechos reservados. Desarrollo: Mateo Diaz y Joaquin Puertas.  </i></h5>
+      </div>
+      <div class="redes">
+        <ul>
+          <img src="" alt="" />
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <h5 class="text-center">
+        <i
+          >Gelatina 2024. &copy; Todos los derechos reservados. Desarrollo:
+          Mateo Diaz y Joaquin Puertas.
+        </i>
+      </h5>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
