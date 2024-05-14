@@ -136,6 +136,8 @@ input {
 }
 
 footer .form {
+    margin: auto;
+    width: 85%;
     background-color: #010203;
     padding: 0;
 }
