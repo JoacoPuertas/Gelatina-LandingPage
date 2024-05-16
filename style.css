@@ -48,16 +48,9 @@ main {
   background-color: #010203;
 }
 
-.form {
-  padding: 20px;
-}
 
 input {
-  margin-top: 20px;
-  padding: 5px 15px;
-  width: 350px;
-  max-width: 70%;
-  background-color: #212321;
+   background-color: #212321;
   outline: none;
   border: 1px solid #fefffa;
   border-radius: 10px;
@@ -65,7 +58,6 @@ input {
 }
 
 .form button {
-  padding: 5px 15px;
   border-radius: 10px;
   background-color: #2aea49;
   color: #010203;
@@ -123,14 +115,15 @@ input {
 
 #programacion {
   font-family: "DM Sans", sans-serif;
+  background-image: url(data/Final\ del\ main.png);
 }
 
 /* FOOTER */
 
 #footer {
-  background-image: url(data/grano_footer.gif);
- 
+  background-image: url(data/ruido.gif); 
 }
+
 
 .footer-img {
   display: flex;
@@ -148,8 +141,15 @@ footer .form {
   width: 85%;
   background-color: #010203;
   padding: 0;
+  border-radius: 15px;
+}
+
+footer .form img {
+  border-radius: 15px;
 }
 
 footer h5 {
   font-weight: 200;
 }
+
+
