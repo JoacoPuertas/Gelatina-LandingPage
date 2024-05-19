@@ -78,16 +78,24 @@ input {
   object-fit: contain;
 }
 */
+#descuentos {
+  position: relative;
+}
+
 .carrusel {
-  margin: 20px auto;
+  margin: 20px;
   padding: 20px 10px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start; 
+  overflow-x: auto; 
+  scroll-behavior: smooth; 
 }
 
 .descuento {
+  min-width: 230px;
   width: 250px;
   height: 350px;
+  margin-right: 15px;
   border-radius: 10px;
   border: 2px solid #2aea49;
   background-color: #212321;
@@ -111,6 +119,24 @@ input {
   border: none;
   border-radius: 5px;
   background-color: #b129ff;
+}
+
+.carrusel::-webkit-scrollbar {
+  height: 10px;
+  width: 50%;
+}
+
+.carrusel::-webkit-scrollbar-thumb {
+  background: #fefffa;
+  border-radius: 5px;
+}
+
+.carrusel::-webkit-scrollbar-thumb:hover {
+  background: #d18df8;
+}
+
+.carrusel::-webkit-scrollbar-track {
+  background: #212321;
 }
 
 #programacion {
@@ -153,3 +179,10 @@ footer h5 {
 }
 
 
+.green {
+  color: #2AEA49;
+}
+
+.red {
+  color: #ea2a2a;
+}
