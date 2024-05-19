@@ -30,8 +30,10 @@ nav {
 }
 
 .nav-link:hover {
-  color: #2aea49;
+  color: #fefffa;
+  border-bottom: 2px solid #2AEA49;
 }
+
 
 nav .navbar {
   display: flex;
@@ -49,7 +51,7 @@ main {
 }
 
 
-input {
+.input {
    background-color: #212321;
   outline: none;
   border: 1px solid #fefffa;
@@ -57,7 +59,7 @@ input {
   color: #fefffa;
 }
 
-.form button {
+.form .button {
   border-radius: 10px;
   background-color: #2aea49;
   color: #010203;

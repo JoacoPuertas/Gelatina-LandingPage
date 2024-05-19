@@ -14,10 +14,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 resultado.classList.add("red");
                 resultado.classList.remove("green");
             } else {
-                resultado.innerHTML = `¡Gracias! El código de descuento se ha enviado a ${email.value}`;
-                resultado.classList.add("green");
-                resultado.classList.remove("red");
+                // resultado.innerHTML = `¡Gracias! El código de descuento se ha enviado a ${email.value}`;
+                // resultado.classList.add("green");
+                // resultado.classList.remove("red");
                 // Aca en realidad habria que activar el popup. Pero me da muchisima paja hacerlo ahora abz
+                resultado.remove("red");
+                boton.setAttribute("data-bs-toggle", "modal");
+                boton.setAttribute("data-bs-target", "#exampleModal");
             }
         });
     });
@@ -32,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function () {
             error[1] = "El email es invalido";
             return error;
         }
-
         return error;
     }
 });
