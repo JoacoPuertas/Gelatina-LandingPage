@@ -5,23 +5,27 @@ document.addEventListener('DOMContentLoaded', function () {
         const email = form.querySelector('input[type="email"]');
         const boton = form.querySelector('button[type="submit"], input[type="submit"]');
         const resultado = form.querySelector('.resultado');
+        const modalEmail = document.querySelector('#exampleModal input[type="email"]');
+        const obtenerFinal = document.querySelector('#exampleModal .obtener-final'); // Selecciona el botón dentro del modal
 
         boton.addEventListener("click", (e) => {
-            e.preventDefault(); // Para que no se reinicie la pagina
+            e.preventDefault(); // Para que no se reinicie la página
             let error = validarCampos(email);
             if (error[0]) {
                 resultado.innerHTML = error[1];
                 resultado.classList.add("red");
                 resultado.classList.remove("green");
             } else {
-                // resultado.innerHTML = `¡Gracias! El código de descuento se ha enviado a ${email.value}`;
-                // resultado.classList.add("green");
-                // resultado.classList.remove("red");
-                // Aca en realidad habria que activar el popup. Pero me da muchisima paja hacerlo ahora abz
-                resultado.remove("red");
+                modalEmail.value = email.value;
                 boton.setAttribute("data-bs-toggle", "modal");
                 boton.setAttribute("data-bs-target", "#exampleModal");
+                resultado.classList.remove("red");
             }
+        });
+
+        obtenerFinal.addEventListener("click", (e2) => {
+            e2.preventDefault(); // Para que no se reinicie la página
+            window.location.href = 'recompensa.html';
         });
     });
 
@@ -32,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
             email.value.indexOf("@") === -1 || 
             email.value.indexOf(".") === -1) {
             error[0] = true;
-            error[1] = "El email es invalido";
+            error[1] = "El email es inválido";
             return error;
         }
         return error;
