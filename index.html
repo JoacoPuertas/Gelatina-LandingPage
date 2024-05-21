@@ -99,7 +99,7 @@
           <!--contenedor dentro de contenedor,
             usado (mas que nada) para aumentar todavia mas el padding en resolucion xxl-->
           <div class="container pe-md-0 pb-lg-5">
-            <h1 class="fs-1 fw-bold">¡Regalo Gelatinoso!</h1>
+            <h1 class=""><b>¡Regalo Gelatinoso!</b></h1>
             <h3 class="fs-6 fw-light pt-2">
               Obtené un codigo de descuento de regalo en alguna de las marcas
               adheridas a Gelatina.
@@ -107,7 +107,49 @@
             <h3 class="fs-6 fw-light">
               Además, ¡Recibí novedades personalizadas de tu programa favorito!
             </h3>
-            <!--formulario para desktop-->
+            <form autocomplete="off">
+              <input autocomplete="off" type="email" placeholder="Correo electronico" class="w-100 py-2 px-4 mt-3 mb-1 input" id="email"/>
+              <button class="w-100 py-2 px-4 mt-1 button" id="btn-enviar" type="submit">OBTENER</button>
+              <div class="resultado"></div>
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog bg-dark">
+                  <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Formulario</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <input autocomplete="off" type="email" placeholder="Correo electronico" class="w-100 py-2 px-4 mt-3 mb-1 input-form-complete" id="email"/>
+                      <input autocomplete="off" type="text" placeholder="Nombre"  class="w-100 py-2 px-4 mt-3 mb-1 input-form">
+                      <input autocomplete="off" type="text" placeholder="Apellido"  class="w-100 py-2 px-4 mt-3 mb-1 input-form">
+                      <div class= "input-group">
+                        <select class="w-100 py-2 px-4 mt-3 mb-1 form-select input-form" id="inputGroupSelect01">
+                          <option selected>Descuento favorito</option>
+                          <option value="1">Kirikocho 20%</option>
+                          <option value="2">DameBola 15%</option>
+                          <option value="3">Batuk 10%</option>
+                        </select>
+                      </div>
+                      <div class= "input-group">
+                        <select class="w-100 py-2 px-4 mt-3 mb-1 form-select input-form" id="inputGroupSelect02">
+                          <option selected>Programa favorito</option>
+                          <option value="1">Industria Nacional</option>
+                          <option value="2">Elijo Creer</option>
+                          <option value="3">HermosaMañanaVerdad</option>
+                          <option value="4">Nuevos Trapos</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-form-cerrar" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-form obtener-final" >Obtener</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              </form>
+            <!-- desktop
             <form class="d-none d-md-block">
               <input
                 type="text"
@@ -120,9 +162,7 @@
                 OBTENER
               </button>
             </form>
-            <!-- formulario para mobile
-                (no se cómo concha me salió pero prefiero
-                no tocarlo mas xd)-->
+            mobile
             <form class="row pt-4 d-md-none">
               <div class="col-12 col-md-6">
                 <section class="row px-2">
@@ -147,7 +187,7 @@
                 </div>
               </div>
               <div class="resultado"></div>
-            </form>
+            </form> -->
           </div>
         </div>
         <!--ilustracion desktop-->
@@ -725,15 +765,34 @@
           </form>
         </div>
       </div>
+      <div class="redes">
+        <ul class="p-5 pb-0 pb-lg-3 text-center d-flex justify-content-center">
+          <img class="logoG" src="data/logo_gelatina.png" alt="Gelatina logo" width="65"
+          height="50"/>
 
-      <div class="redes m-5">
-        <span class="d-flex flex-row justify-content-around fs-3 fs-lg-2">
-          <i class="bi-instagram"></i>
-          <i class="bi-twitter-x"></i>
-          <i class="bi-youtube"></i>
-          <i class="bi-tiktok"></i>
-          <i class="bi-facebook"></i>
-        </span>
+          <div class="linea"></div>
+
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0,0,256,256"
+            style="fill:#000000;">
+            <g fill="#fefffa" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M8,3c-2.761,0 -5,2.239 -5,5v8c0,2.761 2.239,5 5,5h8c2.761,0 5,-2.239 5,-5v-8c0,-2.761 -2.239,-5 -5,-5zM18,5c0.552,0 1,0.448 1,1c0,0.552 -0.448,1 -1,1c-0.552,0 -1,-0.448 -1,-1c0,-0.552 0.448,-1 1,-1zM12,7c2.761,0 5,2.239 5,5c0,2.761 -2.239,5 -5,5c-2.761,0 -5,-2.239 -5,-5c0,-2.761 2.239,-5 5,-5zM12,9c-1.65685,0 -3,1.34315 -3,3c0,1.65685 1.34315,3 3,3c1.65685,0 3,-1.34315 3,-3c0,-1.65685 -1.34315,-3 -3,-3z"></path></g></g>
+            </svg></a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0,0,256,256"
+            style="fill:#000000;">
+            <g fill="#fefffa" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M10.053,7.988l5.631,8.024h-1.497l-5.621,-8.024zM21,6v12c0,1.657 -1.343,3 -3,3h-12c-1.657,0 -3,-1.343 -3,-3v-12c0,-1.657 1.343,-3 3,-3h12c1.657,0 3,1.343 3,3zM17.538,17l-4.186,-5.99l3.422,-4.01h-1.311l-2.704,3.16l-2.207,-3.16h-3.85l3.941,5.633l-3.737,4.367h1.333l3.001,-3.516l2.458,3.516z"></path></g></g>
+            </svg></a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0,0,256,256"
+            style="fill:#000000;">
+            <g fill="#fefffa" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M6,3c-1.64497,0 -3,1.35503 -3,3v12c0,1.64497 1.35503,3 3,3h12c1.64497,0 3,-1.35503 3,-3v-12c0,-1.64497 -1.35503,-3 -3,-3zM12,7h2c0,1.005 1.471,2 2,2v2c-0.605,0 -1.332,-0.26584 -2,-0.71484v3.71484c0,1.654 -1.346,3 -3,3c-1.654,0 -3,-1.346 -3,-3c0,-1.654 1.346,-3 3,-3v2c-0.552,0 -1,0.449 -1,1c0,0.551 0.448,1 1,1c0.552,0 1,-0.449 1,-1z"></path></g></g>
+            </svg></a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0,0,256,256"
+            style="fill:#000000;">
+            <g fill="#fefffa" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M19,3h-14c-1.105,0 -2,0.895 -2,2v14c0,1.105 0.895,2 2,2h7.621v-6.961h-2.343v-2.725h2.343v-2.005c0,-2.324 1.421,-3.591 3.495,-3.591c0.699,-0.002 1.397,0.034 2.092,0.105v2.43h-1.428c-1.13,0 -1.35,0.534 -1.35,1.322v1.735h2.7l-0.351,2.725h-2.365v6.965h3.586c1.105,0 2,-0.895 2,-2v-14c0,-1.105 -0.895,-2 -2,-2z"></path></g></g>
+            </svg></a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0,0,256,256"
+            style="fill:#000000;">
+            <g fill="#fefffa" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M21.582,6.186c-0.23,-0.86 -0.908,-1.538 -1.768,-1.768c-1.56,-0.418 -7.814,-0.418 -7.814,-0.418c0,0 -6.254,0 -7.814,0.418c-0.86,0.23 -1.538,0.908 -1.768,1.768c-0.418,1.56 -0.418,5.814 -0.418,5.814c0,0 0,4.254 0.418,5.814c0.23,0.86 0.908,1.538 1.768,1.768c1.56,0.418 7.814,0.418 7.814,0.418c0,0 6.254,0 7.814,-0.418c0.861,-0.23 1.538,-0.908 1.768,-1.768c0.418,-1.56 0.418,-5.814 0.418,-5.814c0,0 0,-4.254 -0.418,-5.814zM10,15.464v-6.928l6,3.464z"></path></g></g>
+            </svg></a></li>
+        </ul>
       </div>
       <h5 class="text-center">
         <i class="fs-6"
