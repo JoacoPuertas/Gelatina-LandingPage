@@ -3,9 +3,9 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 :root {
-  --first-color: #2AEA49;
-  --second-color: #B129FF ;
-  --third-color: #110313 ;
+  --first-color: #2aea49;
+  --second-color: #b129ff;
+  --third-color: #110313;
 }
 * {
   list-style: none;
@@ -35,13 +35,13 @@ nav {
 
 /* Estilo para el pseudo-elemento antes */
 .nav-link::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #2AEA49;
+  background-color: #2aea49;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 1s, opacity 1s;
@@ -73,7 +73,6 @@ nav .burger {
 main {
   background-color: #010203;
 }
-
 
 .input {
   background-color: #212321;
@@ -108,13 +107,17 @@ main {
   position: relative;
 }
 
+#marcasadheridas {
+  font-family: "DM Sans", sans-serif;
+}
+
 .carrusel {
   margin: 20px;
   padding: 20px 10px;
   display: flex;
-  justify-content: flex-start; 
-  overflow-x: auto; 
-  scroll-behavior: smooth; 
+  justify-content: flex-start;
+  overflow-x: auto;
+  scroll-behavior: smooth;
 }
 
 .descuento {
@@ -167,7 +170,6 @@ main {
 
 #programacion {
   font-family: "DM Sans", sans-serif;
-  background-image: url(data/Final\ del\ main.png);
 }
 
 .programa {
@@ -178,19 +180,14 @@ main {
 /* FOOTER */
 
 #footer {
-  background-image: url(data/ruido.gif); 
+  background-image: url(data/ruido.gif);
 }
 
-
-.footer-img {
-  display: flex;
-  margin: 0;
-  padding: 0;
+.ilus-footer-mobile {
+  max-height: 250px;
 }
-.footer-img img {
-  width: max-content;
-  height: 400px;
-  object-fit: contain;
+.ilus-footer-desktop {
+  max-height: 270px;
 }
 
 footer .form {
@@ -232,15 +229,14 @@ footer h5 {
 }
 
 .btn-form {
-  background-color: #2AEA49;
+  background-color: #2aea49;
   color: #000;
   border: none;
 }
 
-.btn-form:hover{
+.btn-form:hover {
   color: #000;
   background-color: #1ea734;
-  
 }
 
 .btn-form-cerrar {
@@ -248,20 +244,53 @@ footer h5 {
   color: #000;
   border: none;
 }
-.btn-form-cerrar:hover{
+.btn-form-cerrar:hover {
   color: #000;
   background-color: #a71e1e;
 }
 
-.btn-form:focus, .btn-form-cerrar:focus {
+.btn-form:focus,
+.btn-form-cerrar:focus {
   border: none;
   box-shadow: none;
 }
 
 .green {
-  color: #2AEA49;
+  color: #2aea49;
 }
 
 .red {
   color: #ea2a2a;
+}
+
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .finalmain {
+    max-width: 70%;
+  }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .finalmain {
+    max-width: 60%;
+  }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .finalmain {
+    max-width: 50%;
+  }
 }
