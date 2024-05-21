@@ -169,6 +169,11 @@ main {
   background-image: url(data/Final\ del\ main.png);
 }
 
+.programa {
+  max-width: 100px;
+  max-height: 100px;
+}
+
 /* FOOTER */
 
 #footer {
