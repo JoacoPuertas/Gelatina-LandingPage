@@ -6,11 +6,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const boton = form.querySelector('button[type="submit"], input[type="submit"]');
         const resultado = form.querySelector('.resultado');
         const modalEmail = document.querySelector('#exampleModal input[type="email"]');
-        const obtenerFinal = document.querySelector('#exampleModal .obtener-final'); // Selecciona el botón dentro del modal
+        const modalNombre = document.querySelector('#exampleModal input[placeholder="Nombre"]');
+        const obtenerFinal = document.querySelector('#exampleModal .obtener-final');
+        const descuentoSelect = document.querySelector('#inputGroupSelect01');
+        const programaSelect = document.querySelector('#inputGroupSelect02');
 
         boton.addEventListener("click", (e) => {
             e.preventDefault(); // Para que no se reinicie la página
-            let error = validarCampos(email);
+            let error = validarEmail(email);
             if (error[0]) {
                 resultado.innerHTML = error[1];
                 resultado.classList.add("red");
@@ -25,11 +28,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
         obtenerFinal.addEventListener("click", (e2) => {
             e2.preventDefault(); // Para que no se reinicie la página
+            
+            // selecciones del usuario
+            const selectedDescuento = descuentoSelect.options[descuentoSelect.selectedIndex].text;
+            const selectedPrograma = programaSelect.options[programaSelect.selectedIndex].text;
+
+            //selecciones en localStorage
+            localStorage.setItem('selectedDescuento', selectedDescuento);
+            localStorage.setItem('selectedPrograma', selectedPrograma);
+            localStorage.setItem('nombre', modalNombre.value);
+
             window.location.href = 'recompensa.html';
         });
     });
 
-    const validarCampos = (email) => {
+    const validarEmail = (email) => {
         let error = [false, ""];
         if (email.value.length < 5 || 
             email.value.length > 40 || 
@@ -40,5 +53,18 @@ document.addEventListener('DOMContentLoaded', function () {
             return error;
         }
         return error;
+    }
+
+    // recompensa html
+    if (window.location.pathname.includes('recompensa.html')) {
+        const selectedDescuento = localStorage.getItem('selectedDescuento');
+        const selectedPrograma = localStorage.getItem('selectedPrograma');
+        const nombre = localStorage.getItem('nombre');
+
+        if (selectedDescuento && selectedPrograma && nombre) {
+            document.getElementById('descuento').textContent = selectedDescuento;
+            document.getElementById('programa').textContent = selectedPrograma;
+            document.getElementById('nombre').textContent = nombre;
+        }
     }
 });
