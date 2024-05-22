@@ -183,9 +183,14 @@ main {
   background-image: url(data/ruido.gif);
 }
 
-.ilus-footer-mobile {
+.ilus-footer-md {
   max-height: 250px;
 }
+
+.footer-mobile {
+  max-width: 300px;
+}
+
 .ilus-footer-desktop {
   max-height: 270px;
 }
@@ -203,7 +208,7 @@ footer .form {
   color: #fefffa;
   outline: none;
   border: 1px solid #2aea49;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .form-select:focus {
@@ -217,7 +222,7 @@ footer .form {
   color: #fefffa;
   outline: none;
   border: 1px solid #fefffa;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 footer .form img {
@@ -254,6 +259,41 @@ footer h5 {
   border: none;
   box-shadow: none;
 }
+
+/* ------------MODAL------------ */
+.modal-header {
+  border-bottom: 0px;
+}
+.modal-footer {
+  border-top: 0px;
+  justify-content: center;
+}
+  
+.modal-dialog {
+  border-radius: 10px;
+  background-color: #110313;
+}
+
+.modal-content {
+  background-color: #110313;}
+
+.btn-volver {
+  background-color: var(--bs-modal-bg);
+  border-bottom: white;
+  border-color: white;
+  border-right: #ffffff;
+  border-top: black;
+  border-left: black;
+}
+
+.btn-volver:active {
+  background-color: var(--bs-modal-bg);
+  border-bottom: white;
+  border-color: white;
+  border-right: white;
+}
+
+/* ------------FIN MODAL----------*/
 
 .green {
   color: #2aea49;
