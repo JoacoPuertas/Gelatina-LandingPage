@@ -17,12 +17,12 @@ document.addEventListener('DOMContentLoaded', function () {
             if (error[0]) {
                 resultado.innerHTML = error[1];
                 resultado.classList.add("red");
-                resultado.classList.remove("green");
             } else {
                 modalEmail.value = email.value;
                 boton.setAttribute("data-bs-toggle", "modal");
                 boton.setAttribute("data-bs-target", "#exampleModal");
                 resultado.classList.remove("red");
+                resultado.innerHTML = '';
             }
         });
 
@@ -64,7 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (selectedDescuento && selectedPrograma && nombre) {
             document.getElementById('descuento').textContent = selectedDescuento;
             document.getElementById('programa').textContent = selectedPrograma;
-            document.getElementById('nombre').textContent = nombre;
+            document.getElementById('nombre').textContent = nombre.charAt(0).toUpperCase() + nombre.slice(1).toLowerCase();
+
         }
     }
 });

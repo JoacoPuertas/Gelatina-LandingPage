@@ -111,37 +111,17 @@
               Además, ¡Recibí novedades personalizadas de tu programa favorito!
             </h3>
             <form autocomplete="off" >
-              <input
-                autocomplete="off"
-                type="email"
-                placeholder="Correo electronico"
-                class="w-100 py-2 px-4 mt-3 mb-1 input"
-                id="email"
-              />
-              <button
-                class="w-100 py-2 px-4 mt-1 button"
-                id="btn-enviar"
-                type="submit"
-              >
+              <input autocomplete="off" type="email" placeholder="Correo electronico" class="w-100 py-2 px-4 mt-3 mb-1 input" id="email" />
+              <button class="w-100 py-2 px-4 mt-1 button" id="btn-enviar" type="submit" >
                 OBTENER
               </button>
               <div class="resultado"></div>
-              <div
-                class="modal fade"
-                id="exampleModal"
-                tabindex="-1"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-              >
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
                 <div class="modal-dialog bg-dark">
                   <div class="modal-content px-5 pt-3 pb-4">
                     <div class="modal-header py-0">
-                      <button
-                        type="button"
-                        class="btn-volver fs-2 text-white"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      >
+                      <h5>Formulario</h5>
+                      <button type="button" class="btn-volver fs-2 text-white" data-bs-dismiss="modal" aria-label="Close">
                         <i class="bi bi-x-lg"></i>
                       </button>
                     </div>
@@ -190,10 +170,7 @@
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button
-                        type="button"
-                        class="btn btn-form obtener-final w-100 fw-bold"
-                      >
+                      <button type="button" class="btn btn-form obtener-final w-100 fw-bold" >
                         OBTENER REGALO
                       </button>
                     </div>
@@ -248,29 +225,14 @@
         imag q ocupa el 100% y se muestra la que ocupa el 75%, porque la otra
     queda enorme. Se deja de usar la clase css de ilustracion (fijate que opinas, es para
     que la imagen vaya cambiando de tamaño segun resolucion)-->
-          <img
-            class="img-fluid w-100 d-none d-xl-block"
-            src="data/Cabecera_desktop.png"
-            alt="Ilustración"
-          />
-          <img
-            class="img-fluid w-100 d-none d-lg-block d-xl-none"
-            src="data/Cabecera_desktop.png"
-            alt="Ilustración"
-          />
-          <img
-            class="img-fluid w-100 d-none d-md-block d-lg-none"
-            src="data/Cabecera_desktop.png"
-            alt="Ilustración"
-          />
+          <img class="img-fluid w-100 d-none d-xl-block" src="data/Cabecera_desktop.png"  alt="Ilustración" />
+          <img class="img-fluid w-100 d-none d-lg-block d-xl-none" src="data/Cabecera_desktop.png" alt="Ilustración" />
+          <img class="img-fluid w-100 d-none d-md-block d-lg-none" src="data/Cabecera_desktop.png" alt="Ilustración" />
         </div>
       </div>
 
       <!--bullets-->
-      <section
-        class="container my-5 my-lg-0 pb-5 position-relative"
-        id="recompensa"
-      >
+      <section class="container my-5 my-lg-0 pb-5 position-relative" id="recompensa" >
         <div class="row text-center">
           <div class="texto-1 col-12 col-lg-6">
             <span class="material-symbols-outlined fs-1 p-3">
@@ -296,12 +258,15 @@
         </div>
       </section>
       <!--descuentos-->
-      <section class="my-5 pt-5" id="descuentos">
+      <section class="my-2 my-lg-5" id="descuentos">
         <h2 class="text-center" id="marcasadheridas">MARCAS ADHERIDAS</h2>
         <div class="carrusel text-center">
           <div class="descuento">
-            <div class="img-circular"></div>
-            <h2 class="my-3 fs-1">15%</h2>
+            <div class="img-circular">
+              <img src="data/kirikocho.jpg" alt="">
+            </div>
+            <h2 class="fs-1">Kirikocho</h2>
+            <h2 class="fs-1">15%</h2>
             <div class="texto-boton">
               <h5 class="fs-5">En todos los productos</h5>
               <button>Ir al sitio</button>
@@ -446,27 +411,16 @@
         </div>
       </section>
       <!--programacion-->
-      <div
-        class="container-fluid px-0 py-5 position-relative"
-        id="programacion"
-      >
+      <div class="container-fluid px-0 py-5 position-relative" id="programacion" >
         <section class="row p-0 p-sm-5 pb-5 position-relative">
-          <div
-            class="col-12 col-lg-6 my-3 d-flex flex-column justify-content-center mb-5 mb-lg-0"
-          >
+          <div class="col-12 col-lg-6 my-3 d-flex flex-column justify-content-center mb-5 mb-lg-0" >
             <h2 class="text-center">PROGRAMACIÓN</h2>
           </div>
           <!--programa 1-->
           <div class="col-12 col-lg-6 my-3">
             <section class="row d-flex justify-content-center py-4 py-sm-5">
-              <div
-                class="col-12 col-lg-4 p-0 m-0 d-flex justify-content-center justify-content-lg-end"
-              >
-                <img
-                  src="data/nuevostrapos.png"
-                  class="img-fluid programa"
-                  alt=""
-                />
+              <div class="col-12 col-lg-4 p-0 m-0 d-flex justify-content-center justify-content-lg-end" >
+                <img src="data/nuevostrapos.png" class="img-fluid programa" alt="Logo nuevos trapos" />
               </div>
               <div class="container col-10 col-lg-8 ps-lg-4">
                 <h2 class="text-center text-lg-start mb-1 mt-0">
@@ -486,9 +440,8 @@
           <div class="col-12 col-lg-6 my-3">
             <section class="row d-flex justify-content-center py-4 py-sm-5">
               <div
-                class="col-12 col-lg-4 p-0 m-0 d-flex justify-content-center justify-content-lg-end"
-              >
-                <img src="data/hmv.png" class="img-fluid programa" alt="HMV" />
+                class="col-12 col-lg-4 p-0 m-0 d-flex justify-content-center justify-content-lg-end">
+                <img src="data/hmv.png" class="img-fluid programa" alt="Logo de Hermosa Mañana Verdad" />
               </div>
               <div class="container col-10 col-lg-8 ps-lg-4 mt-4 mt-lg-0">
                 <h2 class="text-center text-lg-start mb-1 mt-0">
@@ -510,11 +463,7 @@
               <div
                 class="col-12 col-lg-4 p-0 m-0 d-flex justify-content-center justify-content-lg-end"
               >
-                <img
-                  src="data/elijocreer.png"
-                  class="img-fluid programa"
-                  alt="HMV"
-                />
+                <img src="data/elijocreer.png" class="img-fluid programa" alt="Logo de Elijo Creer" />
               </div>
               <div class="container col-10 col-lg-8 ps-lg-4 mt-4 mt-lg-0">
                 <h2 class="text-center text-lg-start mb-1 mt-0">Elijo Creer</h2>
@@ -531,14 +480,8 @@
           <!--programa 4-->
           <div class="col-12 col-lg-6 my-3">
             <section class="row d-flex justify-content-center py-4 py-sm-5">
-              <div
-                class="col-12 col-lg-4 p-0 m-0 d-flex justify-content-center justify-content-lg-end"
-              >
-                <img
-                  src="data/industrianacional.png"
-                  class="img-fluid programa"
-                  alt="HMV"
-                />
+              <div class="col-12 col-lg-4 p-0 m-0 d-flex justify-content-center justify-content-lg-end" >
+                <img src="data/industrianacional.png " class="img-fluid programa" alt="Logo de industria nacional" />
               </div>
               <div class="container col-10 col-lg-8 ps-lg-4 mt-4 mt-lg-0">
                 <h2 class="text-center text-lg-start mb-1 mt-0">
@@ -558,14 +501,8 @@
           <!--programa 5-->
           <div class="col-12 col-lg-6 my-3">
             <section class="row d-flex justify-content-center py-4 py-sm-5">
-              <div
-                class="col-12 col-lg-4 p-0 m-0 d-flex justify-content-center justify-content-lg-end"
-              >
-                <img
-                  src="data/apustream.png "
-                  class="img-fluid programa"
-                  alt="HMV"
-                />
+              <div class="col-12 col-lg-4 p-0 m-0 d-flex justify-content-center justify-content-lg-end" >
+                <img src="data/apustream.png " class="img-fluid programa" alt="HMV" />
               </div>
               <div class="container col-10 col-lg-8 ps-lg-4 mt-4 mt-lg-0">
                 <h2 class="text-center text-lg-start mb-1 mt-0">APU Stream</h2>
@@ -584,28 +521,14 @@
     </main>
     <!--footer-->
     <footer id="footer" class="p-4 container-fluid position-relative">
-      <div
-        class="form row mt-3 py-md-3 position-relative d-flex justify-content-lg-end"
-      >
+      <div class="form row mt-3 py-md-3 position-relative d-flex justify-content-lg-end" >
         <!--fondo footer tablet-->
-        <div
-          class="d-none d-md-block d-lg-none position-absolute top-0 end-0 p-0 m-0 w-75"
-        >
-          <img
-            class="img-fluid ilus-footer-md position-absolute top-0 end-0"
-            src="data/Footer_md.png"
-            alt=""
-          />
+        <div class="d-none d-md-block d-lg-none position-absolute top-0 end-0 p-0 m-0 w-75" >
+          <img class="img-fluid ilus-footer-md position-absolute top-0 end-0" src="data/Footer_md.png" alt="Gelatina ilustracion" />
         </div>
         <!--fondo footer desktop-->
-        <div
-          class="col-12 col-lg-6 d-none d-lg-block p-0 m-0 position-absolute start-0 bottom-0"
-        >
-          <img
-            class="img-fluid ilus-footer-desktop position-absolute start-0 bottom-0"
-            src="data/Footer_desktop.png"
-            alt=""
-          />
+        <div class="col-12 col-lg-6 d-none d-lg-block p-0 m-0 position-absolute start-0 bottom-0" >
+          <img class="img-fluid ilus-footer-desktop position-absolute start-0 bottom-0"  src="data/Footer_desktop.png" alt="Glatina ilustracion"/>
         </div>
 
         <!--cuerpo desktop-->
@@ -653,7 +576,7 @@
                   <div class="modal-content bg-dark">
                     <div class="modal-header">
                       <h5 class="modal-title" id="exampleModalLabel">
-                        Modal title
+                        Formulario
                       </h5>
                       <button
                         type="button"
