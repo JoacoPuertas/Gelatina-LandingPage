@@ -29,19 +29,40 @@ document.addEventListener('DOMContentLoaded', function () {
         obtenerFinal.addEventListener("click", (e2) => {
             e2.preventDefault(); // Para que no se reinicie la página
             
-            // selecciones del usuario
             const selectedDescuento = descuentoSelect.options[descuentoSelect.selectedIndex].text;
             const selectedPrograma = programaSelect.options[programaSelect.selectedIndex].text;
 
-            //selecciones en localStorage
-            localStorage.setItem('selectedDescuento', selectedDescuento);
-            localStorage.setItem('selectedPrograma', selectedPrograma);
-            localStorage.setItem('nombre', modalNombre.value);
-
-            window.location.href = 'recompensa.html';
+            let error2 = validarModal(modalNombre, selectedDescuento, selectedPrograma );
+            if (error2[0]) {
+                modalNombre.classList.add("red-modal");
+                descuentoSelect.classList.add("red-modal");
+                programaSelect.classList.add("red-modal");
+                // TEngo que hacer que sean individuales los errores.
+            } else {
+                modalNombre.classList.remove("red-modal");
+                modalNombre.classList.add("green-modal")
+                localStorage.setItem('selectedDescuento', selectedDescuento);
+                localStorage.setItem('selectedPrograma', selectedPrograma);
+                localStorage.setItem('nombre', modalNombre.value);
+                window.location.href = 'recompensa.html';
+            }
         });
     });
 
+    const validarModal = (modalNombre, selectedDescuento, selectedPrograma) => {
+        let error2 = [false, ""];
+        if (modalNombre.value.length < 2){
+            error2[0] = true;
+            error2[1] = "Es necesario que completes todos los campos"
+            return error2
+        }else if (selectedDescuento === "Descuento preferido" || selectedPrograma === "Programa favorito") {
+            error2[0] = true;
+            error2[1] = "No seleccionaste ninguna opción";
+            return error2
+        } 
+        return error2;
+    }
+    
     const validarEmail = (email) => {
         let error = [false, ""];
         if (email.value.length < 5 || 
@@ -55,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
         return error;
     }
 
-    // recompensa html
     if (window.location.pathname.includes('recompensa.html')) {
         const selectedDescuento = localStorage.getItem('selectedDescuento');
         const selectedPrograma = localStorage.getItem('selectedPrograma');
@@ -65,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('descuento').textContent = selectedDescuento;
             document.getElementById('programa').textContent = selectedPrograma;
             document.getElementById('nombre').textContent = nombre.charAt(0).toUpperCase() + nombre.slice(1).toLowerCase();
-
         }
     }
 });
