@@ -61,8 +61,18 @@
       </div>
     </nav>
     <main class="container-fluid position-relative">
-      <!--fondo inferior del main-->
-      <div class="position-absolute bottom-0 start-0">
+      
+
+      <!--fondo superior del main-->
+      <div class="position-absolute top-0 end-0">
+        <img
+          src="data/FondoRecompensamobile.PNG"
+          class="img-fluid"
+          alt="Fondo"
+        />
+      </div>
+         <!--fondo inferior del main-->
+       <div class="position-absolute bottom-0 start-0">
         <img
           src="data/Finaldelmain.png"
           class="img-fluid fondoinfmain d-none d-lg-block"
@@ -74,66 +84,44 @@
           alt="Fondo"
         />
       </div>
+      
+      
+      </div>
       <!--header-->
-      <div class="row ps-md-3 ps-lg-5 position-relative">
-        <!--este primer div es la ilustracion para mobile-->
-        <div class="col-12 d-md-none p-0 d-flex justify-content-end">
-          <img
-            class="img-fluid d-sm-none w-100"
-            src="data/Cabecera_ mobile.png"
-            alt="Ilustración"
-          />
-          <img
-            class="img-fluid d-none d-sm-block w-75"
-            src="data/Cabecera_desktop.png"
-            alt="Ilustración"
-          />
-        </div>
+      <div class="row ps-md-3 ps-lg-5 py-5 position-relative">
+        <!-- regalo ilustracion -->
+      <div class="position-absolute top-0 end-0 w-50 px-0">
+        <img
+          src="data/regaloRecompensa.png"
+          class="img-fluid d-none d-md-block"
+          alt="Fondo"
+        />
+      </div>
         <!--texto y formulario-->
         <div
-          class="form col-12 col-md-6 px-sm-0 ps-md-2 pt-md-4 d-flex flex-column justify-content-center"
+          class="form col-12 col-md-6 px-sm-0 ps-md-2 py-5 d-flex flex-column justify-content-center"
         >
           <!--contenedor dentro de contenedor,
                 usado (mas que nada) para aumentar todavia mas el padding en resolucion xxl-->
           <div class="container pe-md-0">
-            <h1 class=""><b>¡Felicitaciones <span id="nombre"></span>!</b></h1>
+            <h1 class="">
+              <b>¡Felicitaciones <span id="nombre"></span>!</b>
+            </h1>
             <h3 class="fs-6 fw-light pt-2">
               Chequeá tu correo, ya podes disfrutar de tu Regalo Gelatinoso. Te
-              enviamos el código de descuento para utilizar en <span id="descuento"></span> ¡Que lo disfrutes!
+              enviamos el código de descuento para utilizar en
+              <span id="descuento"></span> ¡Que lo disfrutes!
             </h3>
             <h3 class="fs-6 fw-light">
               A partir de ahora te vamos a avisar de todos los nuevos contenidos
               de <span id="programa"></span> ¡Gracias por elegir Gelatina!
             </h3>
             <a href="index.html">
-              <button class="w-25 py-2 px-4 mt-3 button">
-                VOLVER
-              </button></a
+              <button class="w-25 py-2 px-4 mt-3 button">VOLVER</button></a
             >
           </div>
         </div>
-        <!--ilustracion desktop-->
-        <div class="ilustracion col-12 col-md-6 d-flex justify-content-end p-0">
-          <!-- aca abajo hay 2 imagenes, cuando la mediaquery llega a xl, se oculta la 
-            imag q ocupa el 100% y se muestra la que ocupa el 75%, porque la otra
-        queda enorme. Se deja de usar la clase css de ilustracion (fijate que opinas, es para
-        que la imagen vaya cambiando de tamaño segun resolucion)-->
-          <img
-            class="img-fluid w-75 d-none d-xl-block"
-            src="data/Footer_md.png"
-            alt="Ilustración"
-          />
-          <img
-            class="img-fluid w-100 d-none d-lg-block d-xl-none"
-            src="data/Footer_md.png"
-            alt="Ilustración"
-          />
-          <img
-            class="img-fluid w-100 d-none d-md-block d-lg-none"
-            src="data/Footer_md.png"
-            alt="Ilustración"
-          />
-        </div>
+        
       </div>
       <!--programacion-->
       <div
@@ -317,7 +305,8 @@
                       d="M8,3c-2.761,0 -5,2.239 -5,5v8c0,2.761 2.239,5 5,5h8c2.761,0 5,-2.239 5,-5v-8c0,-2.761 -2.239,-5 -5,-5zM18,5c0.552,0 1,0.448 1,1c0,0.552 -0.448,1 -1,1c-0.552,0 -1,-0.448 -1,-1c0,-0.552 0.448,-1 1,-1zM12,7c2.761,0 5,2.239 5,5c0,2.761 -2.239,5 -5,5c-2.761,0 -5,-2.239 -5,-5c0,-2.761 2.239,-5 5,-5zM12,9c-1.65685,0 -3,1.34315 -3,3c0,1.65685 1.34315,3 3,3c1.65685,0 3,-1.34315 3,-3c0,-1.65685 -1.34315,-3 -3,-3z"
                     ></path>
                   </g>
-                </g></svg></a>
+                </g></svg
+            ></a>
           </li>
           <li>
             <a href="#"
@@ -351,7 +340,8 @@
                       d="M10.053,7.988l5.631,8.024h-1.497l-5.621,-8.024zM21,6v12c0,1.657 -1.343,3 -3,3h-12c-1.657,0 -3,-1.343 -3,-3v-12c0,-1.657 1.343,-3 3,-3h12c1.657,0 3,1.343 3,3zM17.538,17l-4.186,-5.99l3.422,-4.01h-1.311l-2.704,3.16l-2.207,-3.16h-3.85l3.941,5.633l-3.737,4.367h1.333l3.001,-3.516l2.458,3.516z"
                     ></path>
                   </g>
-                </g></svg></a>
+                </g></svg
+            ></a>
           </li>
           <li>
             <a href="#"
@@ -385,7 +375,8 @@
                       d="M6,3c-1.64497,0 -3,1.35503 -3,3v12c0,1.64497 1.35503,3 3,3h12c1.64497,0 3,-1.35503 3,-3v-12c0,-1.64497 -1.35503,-3 -3,-3zM12,7h2c0,1.005 1.471,2 2,2v2c-0.605,0 -1.332,-0.26584 -2,-0.71484v3.71484c0,1.654 -1.346,3 -3,3c-1.654,0 -3,-1.346 -3,-3c0,-1.654 1.346,-3 3,-3v2c-0.552,0 -1,0.449 -1,1c0,0.551 0.448,1 1,1c0.552,0 1,-0.449 1,-1z"
                     ></path>
                   </g>
-                </g></svg></a>
+                </g></svg
+            ></a>
           </li>
           <li>
             <a href="#"
@@ -419,7 +410,8 @@
                       d="M19,3h-14c-1.105,0 -2,0.895 -2,2v14c0,1.105 0.895,2 2,2h7.621v-6.961h-2.343v-2.725h2.343v-2.005c0,-2.324 1.421,-3.591 3.495,-3.591c0.699,-0.002 1.397,0.034 2.092,0.105v2.43h-1.428c-1.13,0 -1.35,0.534 -1.35,1.322v1.735h2.7l-0.351,2.725h-2.365v6.965h3.586c1.105,0 2,-0.895 2,-2v-14c0,-1.105 -0.895,-2 -2,-2z"
                     ></path>
                   </g>
-                </g></svg></a>
+                </g></svg
+            ></a>
           </li>
           <li>
             <a href="#"
@@ -453,7 +445,8 @@
                       d="M21.582,6.186c-0.23,-0.86 -0.908,-1.538 -1.768,-1.768c-1.56,-0.418 -7.814,-0.418 -7.814,-0.418c0,0 -6.254,0 -7.814,0.418c-0.86,0.23 -1.538,0.908 -1.768,1.768c-0.418,1.56 -0.418,5.814 -0.418,5.814c0,0 0,4.254 0.418,5.814c0.23,0.86 0.908,1.538 1.768,1.768c1.56,0.418 7.814,0.418 7.814,0.418c0,0 6.254,0 7.814,-0.418c0.861,-0.23 1.538,-0.908 1.768,-1.768c0.418,-1.56 0.418,-5.814 0.418,-5.814c0,0 0,-4.254 -0.418,-5.814zM10,15.464v-6.928l6,3.464z"
                     ></path>
                   </g>
-                </g></svg></a>
+                </g></svg
+            ></a>
           </li>
         </ul>
       </div>

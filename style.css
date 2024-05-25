@@ -325,6 +325,9 @@ footer li {
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .botones-form {
+    max-width: 80%;
+  }
 }
 
 /* // Large devices (desktops, 992px and up) */
@@ -335,6 +338,9 @@ footer li {
   .fondosupmain {
     max-height: 800px;
   }
+  .botones-form {
+    max-width: 70%;
+  }
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */
@@ -344,6 +350,9 @@ footer li {
   }
   .fondosupmain {
     max-height: 850px;
+  }
+  .botones-form {
+    max-width: 70%;
   }
 }
 

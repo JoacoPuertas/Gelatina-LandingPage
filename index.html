@@ -82,10 +82,16 @@
       </div>
       <!--fondo superior del main-->
       <div class="position-absolute top-0 end-0">
-        <img src="data/Fondomobile.png" class="img-fluid fondosupmain d-block d-md-none" alt="Fondo" />
-      </div>
-      <div class="position-absolute top-0 end-0">
-        <img src="data/Fondo.png" class="img-fluid fondosupmain d-none d-md-block" alt="Fondo" />
+        <img
+          src="data/Fondomobile.png"
+          class="img-fluid fondosupmain d-block d-md-none"
+          alt="Fondo"
+        />
+        <img
+          src="data/Fondo.png"
+          class="img-fluid fondosupmain d-none d-md-block"
+          alt="Fondo"
+        />
       </div>
       <!--header-->
       <div class="row ps-md-3 ps-lg-5 position-relative">
@@ -113,39 +119,23 @@
               Además, ¡Recibí novedades personalizadas de tu programa favorito!
             </h3>
             <form autocomplete="off">
-              <div class="container p-0 m-0 d-md-none">
-              <input
-                autocomplete="off"
-                type="email"
-                placeholder="Correo electronico"
-                class="w-100 py-2 px-4 mt-3 mb-1 input"
-                id="email"
-              />
-              <button
-                class="w-100 py-2 px-4 mt-1 button"
-                id="btn-enviar"
-                type="submit"
-              >
-              OBTENER
-            </button>
-            </div>
-            <div class="container p-0 m-0 d-none d-md-block w-75">
-              <input
-                autocomplete="off"
-                type="email"
-                placeholder="Correo electronico"
-                class="w-100 py-2 px-4 mt-3 mb-1 input"
-                id="email"
-              />
-              <button
-                class="w-100 py-2 px-4 mt-1 button"
-                id="btn-enviar"
-                type="submit"
-              >
-              OBTENER
-            </button>
-            </div>
-
+              <div class="container botones-form p-0 m-0 ">
+                <input
+                  autocomplete="off"
+                  type="email"
+                  placeholder="Correo electronico"
+                  class="w-100 py-2 px-4 mt-3 mb-1 input"
+                  id="email"
+                />
+                <button
+                  class="w-100 py-2 px-4 mt-1 button"
+                  id="btn-enviar"
+                  type="submit"
+                >
+                  OBTENER
+                </button>
+              </div>
+              
               <div class="resultado"></div>
               <div
                 class="modal fade"
@@ -739,6 +729,8 @@
             </form>
           </span>
         </div>
+        <img src="data/Footer_mobile.png" alt="Ilustracion" class="img-fluid d-md-none">
+        <!--form footer-->
         <div class="col-12 mb-4 px-4 position-relative d-lg-none">
           <form autocomplete="off">
             <input
