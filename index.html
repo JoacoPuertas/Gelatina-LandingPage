@@ -67,31 +67,33 @@
     </nav>
     <!-- header-->
     <main class="container-fluid position-relative">
-      <!--fondo del main lustracion-->
+      <!--fondo inferior del main-->
       <div class="position-absolute bottom-0 start-0">
         <img
           src="data/Finaldelmain.png"
-          class="img-fluid finalmain d-none d-lg-block"
+          class="img-fluid fondoinfmain d-none d-lg-block"
           alt="Fondo"
         />
         <img
           src="data/FinaldelmainMobile.png"
-          class="img-fluid finalmain d-block d-lg-none"
+          class="img-fluid fondoinfmain d-block d-lg-none"
           alt="Fondo"
         />
       </div>
+      <!--fondo superior del main-->
+      <div class="position-absolute top-0 end-0">
+        <img src="data/Fondomobile.png" class="img-fluid fondosupmain d-block d-md-none" alt="Fondo" />
+      </div>
+      <div class="position-absolute top-0 end-0">
+        <img src="data/Fondo.png" class="img-fluid fondosupmain d-none d-md-block" alt="Fondo" />
+      </div>
       <!--header-->
-      <div class="row ps-md-3 ps-lg-5">
-        <!--este primer div es la ilustracion para mobile-->
-        <div class="col-12 d-md-none p-0 d-flex justify-content-end">
+      <div class="row ps-md-3 ps-lg-5 position-relative">
+        <!--ilustracion para mobile-->
+        <div class="col-12 d-md-none py-3 d-flex justify-content-center">
           <img
-            class="img-fluid d-sm-none w-100"
-            src="data/Cabecera_ mobile.png"
-            alt="Ilustración"
-          />
-          <img
-            class="img-fluid d-none d-sm-block w-75"
-            src="data/Cabecera_desktop.png"
+            class="img-fluid d-md-none w-75"
+            src="data/regalo.png"
             alt="Ilustración"
           />
         </div>
@@ -110,18 +112,58 @@
             <h3 class="fs-6 fw-light">
               Además, ¡Recibí novedades personalizadas de tu programa favorito!
             </h3>
-            <form autocomplete="off" >
-              <input autocomplete="off" type="email" placeholder="Correo electronico" class="w-100 py-2 px-4 mt-3 mb-1 input" id="email" />
-              <button class="w-100 py-2 px-4 mt-1 button" id="btn-enviar" type="submit" >
-                OBTENER
-              </button>
+            <form autocomplete="off">
+              <div class="container p-0 m-0 d-md-none">
+              <input
+                autocomplete="off"
+                type="email"
+                placeholder="Correo electronico"
+                class="w-100 py-2 px-4 mt-3 mb-1 input"
+                id="email"
+              />
+              <button
+                class="w-100 py-2 px-4 mt-1 button"
+                id="btn-enviar"
+                type="submit"
+              >
+              OBTENER
+            </button>
+            </div>
+            <div class="container p-0 m-0 d-none d-md-block w-75">
+              <input
+                autocomplete="off"
+                type="email"
+                placeholder="Correo electronico"
+                class="w-100 py-2 px-4 mt-3 mb-1 input"
+                id="email"
+              />
+              <button
+                class="w-100 py-2 px-4 mt-1 button"
+                id="btn-enviar"
+                type="submit"
+              >
+              OBTENER
+            </button>
+            </div>
+
               <div class="resultado"></div>
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
                 <div class="modal-dialog bg-dark">
                   <div class="modal-content px-5 pt-3 pb-4">
                     <div class="modal-header py-0">
                       <h5>Formulario</h5>
-                      <button type="button" class="btn-volver fs-2 text-white" data-bs-dismiss="modal" aria-label="Close">
+                      <button
+                        type="button"
+                        class="btn-volver fs-2 text-white"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      >
                         <i class="bi bi-x-lg"></i>
                       </button>
                     </div>
@@ -170,7 +212,10 @@
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-form obtener-final w-100 fw-bold" >
+                      <button
+                        type="button"
+                        class="btn btn-form obtener-final w-100 fw-bold"
+                      >
                         OBTENER REGALO
                       </button>
                     </div>
@@ -219,20 +264,21 @@
             </form> -->
           </div>
         </div>
-        <!--ilustracion desktop-->
-        <div class="ilustracion col-12 col-md-6 d-flex justify-content-end p-0">
-          <!-- aca abajo hay 2 imagenes, cuando la mediaquery llega a xl, se oculta la 
-        imag q ocupa el 100% y se muestra la que ocupa el 75%, porque la otra
-    queda enorme. Se deja de usar la clase css de ilustracion (fijate que opinas, es para
-    que la imagen vaya cambiando de tamaño segun resolucion)-->
-          <img class="img-fluid w-100 d-none d-xl-block" src="data/Cabecera_desktop.png"  alt="Ilustración" />
-          <img class="img-fluid w-100 d-none d-lg-block d-xl-none" src="data/Cabecera_desktop.png" alt="Ilustración" />
-          <img class="img-fluid w-100 d-none d-md-block d-lg-none" src="data/Cabecera_desktop.png" alt="Ilustración" />
+        <!--ilustracion para desktop-->
+        <div class="col-12 col-md-6 p-3">
+          <img
+            class="img-fluid d-none d-md-block regalo"
+            src="data/regalo.png"
+            alt="Ilustración"
+          />
         </div>
       </div>
 
       <!--bullets-->
-      <section class="container my-5 my-lg-0 pb-5 position-relative" id="recompensa" >
+      <section
+        class="container my-5 my-lg-0 pb-5 position-relative"
+        id="recompensa"
+      >
         <div class="row text-center">
           <div class="texto-1 col-12 col-lg-6">
             <span class="material-symbols-outlined fs-1 p-3">
@@ -263,7 +309,7 @@
         <div class="carrusel text-center">
           <div class="descuento">
             <div class="img-circular">
-              <img src="data/kirikocho.jpg" alt="">
+              <img src="data/kirikocho.jpg" alt="" />
             </div>
             <h2 class="fs-1">Kirikocho</h2>
             <h2 class="fs-1">15%</h2>
@@ -411,16 +457,27 @@
         </div>
       </section>
       <!--programacion-->
-      <div class="container-fluid px-0 py-5 position-relative" id="programacion" >
+      <div
+        class="container-fluid px-0 py-5 position-relative"
+        id="programacion"
+      >
         <section class="row p-0 p-sm-5 pb-5 position-relative">
-          <div class="col-12 col-lg-6 my-3 d-flex flex-column justify-content-center mb-5 mb-lg-0" >
+          <div
+            class="col-12 col-lg-6 my-3 d-flex flex-column justify-content-center mb-5 mb-lg-0"
+          >
             <h2 class="text-center">PROGRAMACIÓN</h2>
           </div>
           <!--programa 1-->
           <div class="col-12 col-lg-6 my-3">
             <section class="row d-flex justify-content-center py-4 py-sm-5">
-              <div class="col-12 col-lg-4 p-0 m-0 d-flex justify-content-center justify-content-lg-end" >
-                <img src="data/nuevostrapos.png" class="img-fluid programa" alt="Logo nuevos trapos" />
+              <div
+                class="col-12 col-lg-4 p-0 m-0 d-flex justify-content-center justify-content-lg-end"
+              >
+                <img
+                  src="data/nuevostrapos.png"
+                  class="img-fluid programa"
+                  alt="Logo nuevos trapos"
+                />
               </div>
               <div class="container col-10 col-lg-8 ps-lg-4">
                 <h2 class="text-center text-lg-start mb-1 mt-0">
@@ -440,8 +497,13 @@
           <div class="col-12 col-lg-6 my-3">
             <section class="row d-flex justify-content-center py-4 py-sm-5">
               <div
-                class="col-12 col-lg-4 p-0 m-0 d-flex justify-content-center justify-content-lg-end">
-                <img src="data/hmv.png" class="img-fluid programa" alt="Logo de Hermosa Mañana Verdad" />
+                class="col-12 col-lg-4 p-0 m-0 d-flex justify-content-center justify-content-lg-end"
+              >
+                <img
+                  src="data/hmv.png"
+                  class="img-fluid programa"
+                  alt="Logo de Hermosa Mañana Verdad"
+                />
               </div>
               <div class="container col-10 col-lg-8 ps-lg-4 mt-4 mt-lg-0">
                 <h2 class="text-center text-lg-start mb-1 mt-0">
@@ -463,7 +525,11 @@
               <div
                 class="col-12 col-lg-4 p-0 m-0 d-flex justify-content-center justify-content-lg-end"
               >
-                <img src="data/elijocreer.png" class="img-fluid programa" alt="Logo de Elijo Creer" />
+                <img
+                  src="data/elijocreer.png"
+                  class="img-fluid programa"
+                  alt="Logo de Elijo Creer"
+                />
               </div>
               <div class="container col-10 col-lg-8 ps-lg-4 mt-4 mt-lg-0">
                 <h2 class="text-center text-lg-start mb-1 mt-0">Elijo Creer</h2>
@@ -480,8 +546,14 @@
           <!--programa 4-->
           <div class="col-12 col-lg-6 my-3">
             <section class="row d-flex justify-content-center py-4 py-sm-5">
-              <div class="col-12 col-lg-4 p-0 m-0 d-flex justify-content-center justify-content-lg-end" >
-                <img src="data/industrianacional.png " class="img-fluid programa" alt="Logo de industria nacional" />
+              <div
+                class="col-12 col-lg-4 p-0 m-0 d-flex justify-content-center justify-content-lg-end"
+              >
+                <img
+                  src="data/industrianacional.png "
+                  class="img-fluid programa"
+                  alt="Logo de industria nacional"
+                />
               </div>
               <div class="container col-10 col-lg-8 ps-lg-4 mt-4 mt-lg-0">
                 <h2 class="text-center text-lg-start mb-1 mt-0">
@@ -501,8 +573,14 @@
           <!--programa 5-->
           <div class="col-12 col-lg-6 my-3">
             <section class="row d-flex justify-content-center py-4 py-sm-5">
-              <div class="col-12 col-lg-4 p-0 m-0 d-flex justify-content-center justify-content-lg-end" >
-                <img src="data/apustream.png " class="img-fluid programa" alt="HMV" />
+              <div
+                class="col-12 col-lg-4 p-0 m-0 d-flex justify-content-center justify-content-lg-end"
+              >
+                <img
+                  src="data/apustream.png "
+                  class="img-fluid programa"
+                  alt="HMV"
+                />
               </div>
               <div class="container col-10 col-lg-8 ps-lg-4 mt-4 mt-lg-0">
                 <h2 class="text-center text-lg-start mb-1 mt-0">APU Stream</h2>
@@ -521,14 +599,28 @@
     </main>
     <!--footer-->
     <footer id="footer" class="p-4 container-fluid position-relative">
-      <div class="form row mt-3 py-md-3 position-relative d-flex justify-content-lg-end" >
+      <div
+        class="form row mt-3 py-md-3 position-relative d-flex justify-content-lg-end"
+      >
         <!--fondo footer tablet-->
-        <div class="d-none d-md-block d-lg-none position-absolute top-0 end-0 p-0 m-0 w-75" >
-          <img class="img-fluid ilus-footer-md position-absolute top-0 end-0" src="data/Footer_md.png" alt="Gelatina ilustracion" />
+        <div
+          class="d-none d-md-block d-lg-none position-absolute top-0 end-0 p-0 m-0 w-75"
+        >
+          <img
+            class="img-fluid ilus-footer-md position-absolute top-0 end-0"
+            src="data/Footer_md.png"
+            alt="Gelatina ilustracion"
+          />
         </div>
         <!--fondo footer desktop-->
-        <div class="col-12 col-lg-6 d-none d-lg-block p-0 m-0 position-absolute start-0 bottom-0" >
-          <img class="img-fluid ilus-footer-desktop position-absolute start-0 bottom-0"  src="data/Footer_desktop.png" alt="Glatina ilustracion"/>
+        <div
+          class="col-12 col-lg-6 d-none d-lg-block p-0 m-0 position-absolute start-0 bottom-0"
+        >
+          <img
+            class="img-fluid ilus-footer-desktop position-absolute start-0 bottom-0"
+            src="data/Footer_desktop.png"
+            alt="Glatina ilustracion"
+          />
         </div>
 
         <!--cuerpo desktop-->
@@ -656,16 +748,33 @@
               class="w-100 py-2 px-4 mt-3 mb-1 input"
               id="email"
             />
-            <button class="w-100 py-2 px-4 mt-1 button" id="btn-enviar" type="submit"> OBTENER </button>
+            <button
+              class="w-100 py-2 px-4 mt-1 button"
+              id="btn-enviar"
+              type="submit"
+            >
+              OBTENER
+            </button>
             <div class="resultado"></div>
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
               <div class="modal-dialog bg-dark">
                 <div class="modal-content bg-dark">
                   <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">
                       Formulario
                     </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
                   </div>
                   <div class="modal-body">
                     <input
@@ -774,7 +883,8 @@
                       d="M8,3c-2.761,0 -5,2.239 -5,5v8c0,2.761 2.239,5 5,5h8c2.761,0 5,-2.239 5,-5v-8c0,-2.761 -2.239,-5 -5,-5zM18,5c0.552,0 1,0.448 1,1c0,0.552 -0.448,1 -1,1c-0.552,0 -1,-0.448 -1,-1c0,-0.552 0.448,-1 1,-1zM12,7c2.761,0 5,2.239 5,5c0,2.761 -2.239,5 -5,5c-2.761,0 -5,-2.239 -5,-5c0,-2.761 2.239,-5 5,-5zM12,9c-1.65685,0 -3,1.34315 -3,3c0,1.65685 1.34315,3 3,3c1.65685,0 3,-1.34315 3,-3c0,-1.65685 -1.34315,-3 -3,-3z"
                     ></path>
                   </g>
-                </g></svg></a>
+                </g></svg
+            ></a>
           </li>
           <li>
             <a href="#"
@@ -808,11 +918,12 @@
                       d="M10.053,7.988l5.631,8.024h-1.497l-5.621,-8.024zM21,6v12c0,1.657 -1.343,3 -3,3h-12c-1.657,0 -3,-1.343 -3,-3v-12c0,-1.657 1.343,-3 3,-3h12c1.657,0 3,1.343 3,3zM17.538,17l-4.186,-5.99l3.422,-4.01h-1.311l-2.704,3.16l-2.207,-3.16h-3.85l3.941,5.633l-3.737,4.367h1.333l3.001,-3.516l2.458,3.516z"
                     ></path>
                   </g>
-                </g></svg></a>
+                </g></svg
+            ></a>
           </li>
           <li>
             <a href="#"
-              ><svg 
+              ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
                 y="0px"
@@ -842,7 +953,8 @@
                       d="M6,3c-1.64497,0 -3,1.35503 -3,3v12c0,1.64497 1.35503,3 3,3h12c1.64497,0 3,-1.35503 3,-3v-12c0,-1.64497 -1.35503,-3 -3,-3zM12,7h2c0,1.005 1.471,2 2,2v2c-0.605,0 -1.332,-0.26584 -2,-0.71484v3.71484c0,1.654 -1.346,3 -3,3c-1.654,0 -3,-1.346 -3,-3c0,-1.654 1.346,-3 3,-3v2c-0.552,0 -1,0.449 -1,1c0,0.551 0.448,1 1,1c0.552,0 1,-0.449 1,-1z"
                     ></path>
                   </g>
-                </g></svg></a>
+                </g></svg
+            ></a>
           </li>
           <li>
             <a href="#"
@@ -876,7 +988,8 @@
                       d="M19,3h-14c-1.105,0 -2,0.895 -2,2v14c0,1.105 0.895,2 2,2h7.621v-6.961h-2.343v-2.725h2.343v-2.005c0,-2.324 1.421,-3.591 3.495,-3.591c0.699,-0.002 1.397,0.034 2.092,0.105v2.43h-1.428c-1.13,0 -1.35,0.534 -1.35,1.322v1.735h2.7l-0.351,2.725h-2.365v6.965h3.586c1.105,0 2,-0.895 2,-2v-14c0,-1.105 -0.895,-2 -2,-2z"
                     ></path>
                   </g>
-                </g></svg></a>
+                </g></svg
+            ></a>
           </li>
           <li>
             <a href="#"
@@ -910,7 +1023,8 @@
                       d="M21.582,6.186c-0.23,-0.86 -0.908,-1.538 -1.768,-1.768c-1.56,-0.418 -7.814,-0.418 -7.814,-0.418c0,0 -6.254,0 -7.814,0.418c-0.86,0.23 -1.538,0.908 -1.768,1.768c-0.418,1.56 -0.418,5.814 -0.418,5.814c0,0 0,4.254 0.418,5.814c0.23,0.86 0.908,1.538 1.768,1.768c1.56,0.418 7.814,0.418 7.814,0.418c0,0 6.254,0 7.814,-0.418c0.861,-0.23 1.538,-0.908 1.768,-1.768c0.418,-1.56 0.418,-5.814 0.418,-5.814c0,0 0,-4.254 -0.418,-5.814zM10,15.464v-6.928l6,3.464z"
                     ></path>
                   </g>
-                </g></svg></a>
+                </g></svg
+            ></a>
           </li>
         </ul>
       </div>

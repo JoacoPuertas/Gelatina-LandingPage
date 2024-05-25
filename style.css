@@ -89,20 +89,7 @@ main {
   font-weight: 700;
   border: none;
 }
-/*
-.ilustracion {
-  display: flex;
-  justify-content: right;
-  margin: 0;
-  padding: 0;
-}
 
-.ilustracion img {
-  width: max-content;
-  height: 500px;
-  object-fit: contain;
-}
-*/
 #descuentos {
   position: relative;
 }
@@ -342,21 +329,30 @@ footer li {
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .finalmain {
+  .fondoinfmain {
     max-width: 70%;
+  }
+  .fondosupmain {
+    max-height: 800px;
   }
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  .finalmain {
+  .fondoinfmain {
     max-width: 60%;
+  }
+  .fondosupmain {
+    max-height: 850px;
   }
 }
 
 /* // XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
-  .finalmain {
+  .fondoinfmain {
     max-width: 50%;
+  }
+  .fondosupmain {
+    max-height: 1100px;
   }
 }
