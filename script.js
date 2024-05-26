@@ -28,19 +28,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
         obtenerFinal.addEventListener("click", (e2) => {
             e2.preventDefault(); // Para que no se reinicie la página
-            
+
             const selectedDescuento = descuentoSelect.options[descuentoSelect.selectedIndex].text;
             const selectedPrograma = programaSelect.options[programaSelect.selectedIndex].text;
 
-            let error2 = validarModal(modalNombre, selectedDescuento, selectedPrograma );
-            if (error2[0]) {
+            let error2 = validarModal(modalNombre, selectedDescuento, selectedPrograma);
+
+            if (modalNombre.value.length < 2) {
                 modalNombre.classList.add("red-modal");
-                descuentoSelect.classList.add("red-modal");
-                programaSelect.classList.add("red-modal");
-                // TEngo que hacer que sean individuales los errores.
+                modalNombre.classList.remove("green-modal");
             } else {
                 modalNombre.classList.remove("red-modal");
-                modalNombre.classList.add("green-modal")
+                modalNombre.classList.add("green-modal");
+            }
+
+            if (selectedDescuento === "Descuento preferido") {
+                descuentoSelect.classList.add("red-modal");
+                descuentoSelect.classList.remove("green-modal");
+            } else {
+                descuentoSelect.classList.remove("red-modal");
+                descuentoSelect.classList.add("green-modal");
+            }
+
+            if (selectedPrograma === "Programa favorito") {
+                
+                programaSelect.classList.add("red-modal");
+                programaSelect.classList.remove("green-modal");
+            } else {
+                programaSelect.classList.remove("red-modal");
+                programaSelect.classList.add("green-modal");
+            }
+
+            if (!error2[0]) {
                 localStorage.setItem('selectedDescuento', selectedDescuento);
                 localStorage.setItem('selectedPrograma', selectedPrograma);
                 localStorage.setItem('nombre', modalNombre.value);
@@ -51,27 +70,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const validarModal = (modalNombre, selectedDescuento, selectedPrograma) => {
         let error2 = [false, ""];
-        if (modalNombre.value.length < 2){
+        if (modalNombre.value.length < 2) {
             error2[0] = true;
-            error2[1] = "Es necesario que completes todos los campos"
-            return error2
-        }else if (selectedDescuento === "Descuento preferido" || selectedPrograma === "Programa favorito") {
+            error2[1] = "Es necesario que completes todos los campos";
+        } else if (selectedDescuento === "Descuento preferido" || selectedPrograma === "Programa favorito") {
             error2[0] = true;
             error2[1] = "No seleccionaste ninguna opción";
-            return error2
-        } 
+        }
         return error2;
     }
-    
+
     const validarEmail = (email) => {
         let error = [false, ""];
-        if (email.value.length < 5 || 
-            email.value.length > 40 || 
-            email.value.indexOf("@") === -1 || 
+        if (email.value.length < 5 ||
+            email.value.length > 40 ||
+            email.value.indexOf("@") === -1 ||
             email.value.indexOf(".") === -1) {
             error[0] = true;
             error[1] = "El email es inválido";
-            return error;
         }
         return error;
     }
