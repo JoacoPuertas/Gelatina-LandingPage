@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const resultado = form.querySelector('.resultado');
         const modalEmail = document.querySelector('#exampleModal input[type="email"]');
         const modalNombre = document.querySelector('#exampleModal input[placeholder="Nombre"]');
+        const modalApellido = document.querySelector('#exampleModal input[placeholder="Apellido"]')
         const obtenerFinal = document.querySelector('#exampleModal .obtener-final');
         const descuentoSelect = document.querySelector('#inputGroupSelect01');
         const programaSelect = document.querySelector('#inputGroupSelect02');
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const selectedDescuento = descuentoSelect.options[descuentoSelect.selectedIndex].text;
             const selectedPrograma = programaSelect.options[programaSelect.selectedIndex].text;
 
-            let error2 = validarModal(modalNombre, selectedDescuento, selectedPrograma);
+            let error2 = validarModal(modalNombre, modalApellido, selectedDescuento, selectedPrograma);
 
             if (modalNombre.value.length < 2) {
                 modalNombre.classList.add("red-modal");
@@ -40,6 +41,14 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 modalNombre.classList.remove("red-modal");
                 modalNombre.classList.add("green-modal");
+            }
+
+            if (modalApellido.value.length < 2) {
+                modalApellido.classList.add("red-modal");
+                modalApellido.classList.remove("green-modal");
+            } else {
+                modalApellido.classList.remove("red-modal");
+                modalApellido.classList.add("green-modal");
             }
 
             if (selectedDescuento === "Descuento preferido") {
@@ -63,14 +72,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 localStorage.setItem('selectedDescuento', selectedDescuento);
                 localStorage.setItem('selectedPrograma', selectedPrograma);
                 localStorage.setItem('nombre', modalNombre.value);
+                localStorage.setItem('apellido', modalApellido.value);
                 window.location.href = 'recompensa.html';
             }
         });
     });
 
-    const validarModal = (modalNombre, selectedDescuento, selectedPrograma) => {
+    const validarModal = (modalNombre, modalApellido, selectedDescuento, selectedPrograma) => {
         let error2 = [false, ""];
-        if (modalNombre.value.length < 2) {
+        if (modalNombre.value.length < 2 || modalApellido.value.length < 2) {
             error2[0] = true;
             error2[1] = "Es necesario que completes todos los campos";
         } else if (selectedDescuento === "Descuento preferido" || selectedPrograma === "Programa favorito") {
