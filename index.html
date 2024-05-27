@@ -111,31 +111,37 @@
             usado (mas que nada) para aumentar todavia mas el padding en resolucion xxl-->
           <div class="container pe-md-0 pb-lg-5">
             <h1 class=""><b>¡Regalo Gelatinoso!</b></h1>
-            <h3 class="fs-6 fw-light pt-2">
+            <h3 class="fs-5 fw-light pt-2">
               Obtené un codigo de descuento de regalo en alguna de las marcas
               adheridas a Gelatina.
             </h3>
-            <h3 class="fs-6 fw-light">
+            <h3 class="fs-5 fw-light">
               Además, ¡Recibí novedades personalizadas de tu programa favorito!
             </h3>
             <form autocomplete="off">
-              <div class="container botones-form p-0 m-0 ">
-                <input
-                  autocomplete="off"
-                  type="email"
-                  placeholder="Correo electronico"
-                  class="w-100 py-2 px-4 mt-3 mb-1 input"
-                  id="email"
-                />
-                <button
-                  class="w-100 py-2 px-4 mt-1 button"
-                  id="btn-enviar"
-                  type="submit"
-                >
-                  OBTENER
-                </button>
+              <div class="container botones-form p-0 m-0">
+                <section class="row pt-lg-3">
+                  <div class="col-12 col-lg-8 px-2 px-lg-0 ps-lg-3">
+                    <input
+                      autocomplete="off"
+                      type="email"
+                      placeholder="Correo electronico"
+                      class="w-100 py-2 px-4 mt-3 mt-lg-0 mb-1 mb-lg-0 input"
+                      id="email"
+                    />
+                  </div>
+                  <div class="col-12 col-lg-4 px-2 px-lg-0 ps-lg-2">
+                    <button
+                      class="w-100 py-2 px-4 px-lg-0 mt-1 mt-lg-0 button"
+                      id="btn-enviar"
+                      type="submit"
+                    >
+                      OBTENER
+                    </button>
+                  </div>
+                </section>
               </div>
-              
+
               <div class="resultado"></div>
               <div
                 class="modal fade"
@@ -181,19 +187,19 @@
                           class="w-100 py-2 px-4 mt-3 mb-1 form-select input-form"
                           id="inputGroupSelect01"
                         >
-                        <option selected>Descuento preferido</option>
-                        <option value="1">Kirikocho 20%</option>
-                        <option value="2">DameBola 15%</option>
-                        <option value="3">Batuk 10%</option>
-                        <option value="4">King of the Kongo 12%</option>
-                        <option value="5">Mañanita 15%</option>
-                        <option value="6">Aveno 20%</option>
-                        <option value="7">Kevingston 10%</option>
-                        <option value="8">Mateo Diaz Arte 30%</option>
-                        <option value="9">Medias Fox 10%</option>
-                        <option value="10">Baxar mercado 10%</option>
-                        <option value="11">Dove 15%</option>
-                        <option value="12">Jetlag 10%</option>
+                          <option selected>Descuento preferido</option>
+                          <option value="1">Kirikocho 20%</option>
+                          <option value="2">DameBola 15%</option>
+                          <option value="3">Batuk 10%</option>
+                          <option value="4">King of the Kongo 12%</option>
+                          <option value="5">Mañanita 15%</option>
+                          <option value="6">Aveno 20%</option>
+                          <option value="7">Kevingston 10%</option>
+                          <option value="8">Mateo Diaz Arte 30%</option>
+                          <option value="9">Medias Fox 10%</option>
+                          <option value="10">Baxar mercado 10%</option>
+                          <option value="11">Dove 15%</option>
+                          <option value="12">Jetlag 10%</option>
                         </select>
                       </div>
                       <div class="input-group">
@@ -201,12 +207,12 @@
                           class="w-100 py-2 px-4 mt-3 mb-1 form-select input-form"
                           id="inputGroupSelect02"
                         >
-                        <option selected>Programa favorito</option>
-                        <option value="1">Nuevos Trapos</option>
-                        <option value="2">Hermosa Mañana Verdad</option>
-                        <option value="3">Elijo Creer</option>
-                        <option value="4">Industria Nacional</option>
-                        <option value="5">Apu Stream</option>
+                          <option selected>Programa favorito</option>
+                          <option value="1">Nuevos Trapos</option>
+                          <option value="2">Hermosa Mañana Verdad</option>
+                          <option value="3">Elijo Creer</option>
+                          <option value="4">Industria Nacional</option>
+                          <option value="5">Apu Stream</option>
                         </select>
                       </div>
                     </div>
@@ -308,7 +314,11 @@
         <div class="carrusel text-center">
           <div class="descuento">
             <div class="img-circular">
-              <img class="rounded-circle h-50" src="data/kirikocho.jpg" alt="Logo de Kirikocho" />
+              <img
+                class="rounded-circle h-50"
+                src="data/kirikocho.jpg"
+                alt="Logo de Kirikocho"
+              />
             </div>
             <h2 class="fs-2">Kirikocho</h2>
             <h2 class="fs-1">10%</h2>
@@ -417,7 +427,7 @@
             </div>
           </div>
           <div class="descuento">
-            <div class="img-circular ">
+            <div class="img-circular">
               <img class="rounded-circle" src="data/dove.png" alt="" />
             </div>
             <h2 class="fs-12">Dove</h2>
@@ -624,25 +634,31 @@
               src="data/IMG_2761.png"
               alt=""
           /></span>
-          <span class="d-none d-lg-block">
+          <div class="d-none d-lg-block">
             <form autocomplete="off">
-              <input
-                autocomplete="off"
-                type="email"
-                placeholder="Correo electronico"
-                class="w-75 py-2 px-4 mt-3 mb-1 input"
-                id="email"
-              />
-              <button
-                class="py-2 px-4 mt-1 button"
-                id="btn-enviar"
-                type="submit"
-              >
-                OBTENER
-              </button>
+              <section class="row">
+                <div class="col-8 ps-2 ">
+                  <input
+                    autocomplete="off"
+                    type="email"
+                    placeholder="Correo electronico"
+                    class="w-100 py-2 ps-4  input"
+                    id="email"
+                  />
+                </div>
+                <div class="col-4 px-0">
+                  <button
+                    class="w-100 py-2 button"
+                    id="btn-enviar"
+                    type="submit"
+                  >
+                    OBTENER
+                  </button>
+                </div>
+              </section>
               <div class="resultado"></div>
               <div
-                class="modal fade "
+                class="modal fade"
                 id="exampleModal"
                 tabindex="-1"
                 aria-labelledby="exampleModalLabel"
@@ -670,14 +686,14 @@
                         autocomplete="off"
                         type="text"
                         placeholder="Nombre"
-                        class="w-100 py-2 px-4 mt-3 mb-1 input-form "
+                        class="w-100 py-2 px-4 mt-3 mb-1 input-form"
                         required
                       />
                       <input
                         autocomplete="off"
                         type="text"
                         placeholder="Apellido"
-                        class="w-100 py-2 px-4 mt-3 mb-1 input-form "
+                        class="w-100 py-2 px-4 mt-3 mb-1 input-form"
                         required
                       />
                       <div class="input-group">
@@ -685,19 +701,19 @@
                           class="w-100 py-2 px-4 mt-3 mb-1 form-select input-form"
                           id="inputGroupSelect01"
                         >
-                        <option selected>Descuento preferido</option>
-                        <option value="1">Kirikocho 20%</option>
-                        <option value="2">DameBola 15%</option>
-                        <option value="3">Batuk 10%</option>
-                        <option value="4">King of the Kongo 12%</option>
-                        <option value="5">Mañanita 15%</option>
-                        <option value="6">Aveno 20%</option>
-                        <option value="7">Kevingston 10%</option>
-                        <option value="8">Mateo Diaz Arte 30%</option>
-                        <option value="9">Medias Fox 10%</option>
-                        <option value="10">Baxar mercado 10%</option>
-                        <option value="11">Dove 15%</option>
-                        <option value="12">Jetlag 10%</option>
+                          <option selected>Descuento preferido</option>
+                          <option value="1">Kirikocho 20%</option>
+                          <option value="2">DameBola 15%</option>
+                          <option value="3">Batuk 10%</option>
+                          <option value="4">King of the Kongo 12%</option>
+                          <option value="5">Mañanita 15%</option>
+                          <option value="6">Aveno 20%</option>
+                          <option value="7">Kevingston 10%</option>
+                          <option value="8">Mateo Diaz Arte 30%</option>
+                          <option value="9">Medias Fox 10%</option>
+                          <option value="10">Baxar mercado 10%</option>
+                          <option value="11">Dove 15%</option>
+                          <option value="12">Jetlag 10%</option>
                         </select>
                       </div>
                       <div class="input-group invalido">
@@ -705,12 +721,12 @@
                           class="w-100 py-2 px-4 mt-3 mb-1 form-select input-form"
                           id="inputGroupSelect02"
                         >
-                        <option selected>Programa favorito</option>
-                        <option value="1">Nuevos Trapos</option>
-                        <option value="2">Hermosa Mañana Verdad</option>
-                        <option value="3">Elijo Creer</option>
-                        <option value="4">Industria Nacional</option>
-                        <option value="5">Apu Stream</option>
+                          <option selected>Programa favorito</option>
+                          <option value="1">Nuevos Trapos</option>
+                          <option value="2">Hermosa Mañana Verdad</option>
+                          <option value="3">Elijo Creer</option>
+                          <option value="4">Industria Nacional</option>
+                          <option value="5">Apu Stream</option>
                         </select>
                       </div>
                     </div>
@@ -730,9 +746,13 @@
                 </div>
               </div>
             </form>
-          </span>
+          </div>
         </div>
-        <img src="data/Footer_mobile.png" alt="Ilustracion" class="img-fluid d-md-none">
+        <img
+          src="data/Footer_mobile.png"
+          alt="Ilustracion"
+          class="img-fluid d-md-none"
+        />
         <!--form footer-->
         <div class="col-12 mb-4 px-4 position-relative d-lg-none">
           <form autocomplete="off">
